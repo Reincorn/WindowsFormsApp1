@@ -47,7 +47,7 @@ namespace WindowsFormsApp1
         {
             //рисуем окружность с диаметром равным Power
             g.DrawEllipse(
-                   new Pen(Color.Red),
+                   new Pen(Color.White),
                    X - Power / 2,
                    Y - Power / 2,
                    Power,
@@ -67,6 +67,31 @@ namespace WindowsFormsApp1
 
             particle.SpeedX -= gX * Power / r2;
             particle.SpeedY -= gY * Power / r2;
+        }
+    }
+    public class PainterPoint : IImpactPoint
+    {
+        public Color PointColor = Color.White;
+        public float Rad = 15;
+
+        public override void ImpactParticle(Particle particle)
+        {
+            //Проверка попадания частицы в радиус круга
+            float gX = X - particle.X;
+            float gY = Y - particle.Y;
+
+            double r = Math.Sqrt(gX * gX + gY * gY);
+
+            if (r - particle.Radius < Rad)
+            {
+                particle.Color1 = PointColor;
+                particle.Color0 = Color.FromArgb(0, PointColor);
+            }
+        }
+
+        public override void Render(Graphics g)
+        {
+            g.DrawEllipse(new Pen(new SolidBrush(PointColor), 2), X - Rad, Y - Rad, Rad * 2, Rad * 2);
         }
     }
 }

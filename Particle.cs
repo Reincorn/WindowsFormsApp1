@@ -19,6 +19,9 @@ namespace WindowsFormsApp1
         public float Life; // здоровье частицы
         public static Random rand = new Random();//Генератор случайных чисел
 
+        public Color Color0;
+        public Color Color1;
+
         public Particle() //Констуруктор, который создаёт кастомную частицу
         {
             var direction = (double)rand.Next(360);//
