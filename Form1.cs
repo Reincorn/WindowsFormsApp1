@@ -33,15 +33,15 @@ namespace WindowsFormsApp1
             emitters.Add(this.emitter);
             paint1 = new PainterPoint
             {
-                PointColor = Color.White,
+                PointColor = Color.Orange,
                 X = (picDisplay.Width / 2) - 200,
                 Y = (picDisplay.Height / 2) - 100,
-                Rad = 50,
+                Rad = 30,
             };
 
             paint2 = new PainterPoint
             {
-                PointColor = Color.Red,
+                PointColor = Color.White,
                 X = (picDisplay.Width / 2) + 200,
                 Y = (picDisplay.Height / 2) - 100,
                 Rad = 50,
@@ -49,55 +49,31 @@ namespace WindowsFormsApp1
 
             point1 = new GravityPoint
             {
+                PointColor = Color.White,
                 X = picDisplay.Width / 2 - 100,
                 Y = picDisplay.Height / 2
             };
             emitter.impactPoints.Add(paint1);
             emitter.impactPoints.Add(point1);
-            tbDirection.Value = 0;
-            tbRazbros.Value = 0;
-            tbGraviton.Value = 100;
-            tbGraviton1.Value = 100;
         }
 
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            emitter.UpdateState();//обновление эмиттера
-            using (var g = Graphics.FromImage(picDisplay.Image))
+            foreach (var emitter in emitters)
             {
-                g.Clear(Color.Black);//Очистка экрана, заливка формы в чёрный цвет
-                emitter.Render(g); //Рендеринг системы через эмиттер
+                emitter.UpdateState();//обновление эмиттера
+                using (var g = Graphics.FromImage(picDisplay.Image))
+                {
+                    g.Clear(Color.Black);//Очистка экрана, заливка формы в чёрный цвет
+                    emitter.Render(g); //Рендеринг системы через эмиттер
+                }
             }
             picDisplay.Invalidate();//обновление формы
         }
 
         //Фиксация положения мыши
         
-
-        private void tbGraviton1_Scroll_1(object sender, EventArgs e)
-        {
-            point1.Power = tbGraviton1.Value;
-            lblKryg1.Text = $"{tbGraviton1.Value}°";
-        }
-
-        private void tbGraviton_Scroll_1(object sender, EventArgs e)
-        {
-            point.Power = tbGraviton.Value;
-            lblKryg.Text = $"{tbGraviton.Value}°";
-        }
-
-        private void tbRazbros_Scroll_1(object sender, EventArgs e)
-        {
-            emitter.Spreading = tbRazbros.Value;
-            lblRazbros.Text = $"{tbRazbros.Value}°";
-        }
-
-        private void tbDirection_Scroll_1(object sender, EventArgs e)
-        {
-            emitter.Direction = tbDirection.Value;
-            lblDirection.Text = $"{tbDirection.Value}°";
-        }
 
         private void picDisplay_MouseMove(object sender, MouseEventArgs e)
         { 
@@ -110,6 +86,11 @@ namespace WindowsFormsApp1
                     point1.X = e.X;
                     point1.Y = e.Y;
                 }
+        }
+
+        private void lblKryg_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

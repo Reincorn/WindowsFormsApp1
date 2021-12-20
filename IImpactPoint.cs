@@ -30,7 +30,7 @@ namespace WindowsFormsApp1
     public class GravityPoint : IImpactPoint//круг притяжения
     {
         public int Power = 100;// сила притяжения
-
+        public Color PointColor = Color.White;
         public override void ImpactParticle(Particle particle)
         {
             float gX = X - particle.X;
@@ -47,7 +47,7 @@ namespace WindowsFormsApp1
         {
             //рисуем окружность с диаметром равным Power
             g.DrawEllipse(
-                   new Pen(Color.White),
+                   new Pen(Color.Red),
                    X - Power / 2,
                    Y - Power / 2,
                    Power,
@@ -69,6 +69,7 @@ namespace WindowsFormsApp1
             particle.SpeedY -= gY * Power / r2;
         }
     }
+
     public class PainterPoint : IImpactPoint
     {
         public Color PointColor = Color.White;

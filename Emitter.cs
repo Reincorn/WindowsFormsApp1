@@ -94,7 +94,8 @@ namespace WindowsFormsApp1
             particle.Life = Particle.rand.Next(LifeMin, LifeMax);//Восстановление здоровья
             particle.X = X; //Перенос частиц 
             particle.Y = Y;
-
+            particle.Color1 = ColorFrom;
+            particle.Color0 = ColorTo;
             var direction = Direction
                 + (double)Particle.rand.Next(Spreading)
                 - Spreading / 2;
@@ -109,8 +110,8 @@ namespace WindowsFormsApp1
         public virtual Particle CreateParticle()
         {
             var particle = new ParticleColorful();
-            particle.FromColor = ColorFrom;
-            particle.ToColor = ColorTo;
+            particle.Color1 = ColorFrom;
+            particle.Color0 = ColorTo;
 
             return particle;
         }

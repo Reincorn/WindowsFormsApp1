@@ -48,8 +48,6 @@ namespace WindowsFormsApp1
     }
     public class ParticleColorful : Particle
     {
-        public Color FromColor;
-        public Color ToColor;
         public static Color MixColor(Color color1, Color color2, float k)
         {
             return Color.FromArgb(
@@ -62,7 +60,7 @@ namespace WindowsFormsApp1
         public override void Draw(Graphics g)
         {
             float k = Math.Min(1f, Life / 100);
-            var color = MixColor(ToColor, FromColor, k);
+            var color = MixColor(Color1, Color0, k);
             var b = new SolidBrush(color);
             g.FillEllipse(b, X - Radius, Y - Radius, Radius * 2, Radius * 2);
             b.Dispose();
