@@ -40,7 +40,6 @@ namespace WindowsFormsApp1
 
             foreach (var particle in particles) //пересчитывание положения частиц в соответствии с их направлением движения и скоростью.
             {
-                //particle.Life -= 1;
                 if (particle.Life <= 0)
                 {
                     ResetParticle(particle);
@@ -94,8 +93,8 @@ namespace WindowsFormsApp1
             particle.Life = Particle.rand.Next(LifeMin, LifeMax);//Восстановление здоровья
             particle.X = X; //Перенос частиц 
             particle.Y = Y;
-            particle.Color1 = ColorFrom;
-            particle.Color0 = ColorTo;
+            particle.Color0 = ColorFrom;
+            particle.Color1 = ColorTo;
             var direction = Direction
                 + (double)Particle.rand.Next(Spreading)
                 - Spreading / 2;
@@ -110,8 +109,8 @@ namespace WindowsFormsApp1
         public virtual Particle CreateParticle()
         {
             var particle = new ParticleColorful();
-            particle.Color1 = ColorFrom;
-            particle.Color0 = ColorTo;
+            particle.Color0 = ColorFrom;
+            particle.Color1 = ColorTo;
 
             return particle;
         }

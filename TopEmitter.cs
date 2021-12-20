@@ -9,9 +9,10 @@ namespace WindowsFormsApp1
     class TopEmitter : Emitter
     {
         public int Width;//длина экрана
-
+        
         public override void ResetParticle(Particle particle)
         {
+
             base.ResetParticle(particle);//базовый сброс частицы
 
             //Параметры движения
@@ -20,6 +21,7 @@ namespace WindowsFormsApp1
 
             particle.SpeedY = 1;//падаем вниз
             particle.SpeedX = Particle.rand.Next(-2, 2);//разброс влево и вправа у частиц
+
         }
     }
 }

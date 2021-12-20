@@ -18,13 +18,14 @@ namespace WindowsFormsApp1
         GravityPoint point1;//первая точка
         public PainterPoint paint1;
         public PainterPoint paint2;
-
+        Particle part = new Particle();
         public Form1()
         {
             InitializeComponent();
             picDisplay.Image = new Bitmap(picDisplay.Width, picDisplay.Height);//Привязка изображения
 
             emitter = new TopEmitter
+
             {
                 Width = picDisplay.Width,
                 GravitationY = 0.2f,
