@@ -271,7 +271,7 @@ namespace WindowsFormsApp1
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox1.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Дед;
+            this.pictureBox1.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Дед1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Enabled = false;
             this.pictureBox1.Location = new System.Drawing.Point(943, 370);
