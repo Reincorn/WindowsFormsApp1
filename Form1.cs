@@ -119,5 +119,55 @@ namespace WindowsFormsApp1
         {
             paint1.Y = MovingY.Value;
         }
+
+        private void Radius_Scroll(object sender, EventArgs e)
+        {
+            paint1.Rad = Radius.Value;
+        }
+
+        private void trackBar1_Scroll_1(object sender, EventArgs e)
+        {
+            paint2.X = trackBar1.Value;
+        }
+
+        private void trackBar2_Scroll(object sender, EventArgs e)
+        {
+            paint2.Y = trackBar2.Value;
+        }
+
+        private void trackBar3_Scroll(object sender, EventArgs e)
+        {
+            paint2.Rad = trackBar3.Value;
+        }
+
+        private void trackBar4_Scroll(object sender, EventArgs e)
+        {
+            paint3.X = trackBar4.Value;
+        }
+
+        private void trackBar5_Scroll(object sender, EventArgs e)
+        {
+            paint3.Y = trackBar5.Value;
+        }
+
+        private void trackBar6_Scroll(object sender, EventArgs e)
+        {
+            paint3.Rad = trackBar6.Value;
+        }
+
+        private void trackBar7_Scroll(object sender, EventArgs e)
+        {
+            paint4.X = trackBar7.Value;
+        }
+
+        private void trackBar8_Scroll(object sender, EventArgs e)
+        {
+            paint4.Y = trackBar8.Value;
+        }
+
+        private void trackBar9_Scroll(object sender, EventArgs e)
+        {
+            paint4.Rad = trackBar9.Value;
+        }
     }
 }
