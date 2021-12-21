@@ -30,7 +30,6 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.picDisplay = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.MovingY = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,7 +48,8 @@ namespace WindowsFormsApp1
             this.trackBar8 = new System.Windows.Forms.TrackBar();
             this.trackBar9 = new System.Windows.Forms.TrackBar();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.picDisplay)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picDisplay = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.MovingY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MovingX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Radius)).BeginInit();
@@ -62,16 +62,9 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.trackBar7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDisplay)).BeginInit();
             this.SuspendLayout();
-            // 
-            // picDisplay
-            // 
-            this.picDisplay.Location = new System.Drawing.Point(-1, 12);
-            this.picDisplay.Name = "picDisplay";
-            this.picDisplay.Size = new System.Drawing.Size(1022, 352);
-            this.picDisplay.TabIndex = 0;
-            this.picDisplay.TabStop = false;
-            this.picDisplay.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picDisplay_MouseMove);
             // 
             // timer1
             // 
@@ -275,9 +268,32 @@ namespace WindowsFormsApp1
             this.label4.TabIndex = 19;
             this.label4.Text = "К\r\nр\r\nу\r\nг \r\n4";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Дед;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Enabled = false;
+            this.pictureBox1.Location = new System.Drawing.Point(943, 370);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(66, 85);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
+            // picDisplay
+            // 
+            this.picDisplay.Location = new System.Drawing.Point(-1, 12);
+            this.picDisplay.Name = "picDisplay";
+            this.picDisplay.Size = new System.Drawing.Size(1022, 352);
+            this.picDisplay.TabIndex = 0;
+            this.picDisplay.TabStop = false;
+            this.picDisplay.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picDisplay_MouseMove);
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(1021, 462);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.trackBar9);
             this.Controls.Add(this.trackBar8);
@@ -296,7 +312,6 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.MovingX);
             this.Controls.Add(this.picDisplay);
             this.Name = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.picDisplay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MovingY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MovingX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Radius)).EndInit();
@@ -309,6 +324,8 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.trackBar7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDisplay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,6 +352,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TrackBar trackBar8;
         private System.Windows.Forms.TrackBar trackBar9;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
