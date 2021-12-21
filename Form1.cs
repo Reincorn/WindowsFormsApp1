@@ -18,6 +18,8 @@ namespace WindowsFormsApp1
         GravityPoint point1;//первая точка
         public PainterPoint paint1;
         public PainterPoint paint2;
+        public PainterPoint paint3;
+        public PainterPoint paint4;
         Particle part = new Particle();
         public Form1()
         {
@@ -32,19 +34,36 @@ namespace WindowsFormsApp1
                 ParticlesPerTick = 2,
             };
             emitters.Add(this.emitter);
+
             paint1 = new PainterPoint
             {
                 PointColor = Color.Orange,
-                X = (picDisplay.Width / 2) - 200,
-                Y = (picDisplay.Height / 2) - 100,
-                Rad = 30,
+                X = (picDisplay.Width / 2) - 300,
+                Y = (picDisplay.Height / 2) - 10,
+                Rad = 50,
             };
 
             paint2 = new PainterPoint
             {
-                PointColor = Color.White,
-                X = (picDisplay.Width / 2) + 200,
-                Y = (picDisplay.Height / 2) - 100,
+                PointColor = Color.Yellow,
+                X = (picDisplay.Width / 2) - 120,
+                Y = (picDisplay.Height / 2) + 50,
+                Rad = 50,
+            };
+
+            paint3 = new PainterPoint
+            {
+                PointColor = Color.Cyan,
+                X = (picDisplay.Width / 2) + 60,
+                Y = (picDisplay.Height / 2) + 50,
+                Rad = 50,
+            };
+
+            paint4 = new PainterPoint
+            {
+                PointColor = Color.Blue,
+                X = (picDisplay.Width / 2) + 300,
+                Y = (picDisplay.Height / 2) - 10,
                 Rad = 50,
             };
 
@@ -55,7 +74,9 @@ namespace WindowsFormsApp1
                 Y = picDisplay.Height / 2
             };
             emitter.impactPoints.Add(paint1);
-            emitter.impactPoints.Add(point1);
+            emitter.impactPoints.Add(paint2);
+            emitter.impactPoints.Add(paint3);
+            emitter.impactPoints.Add(paint4);
         }
 
 

@@ -47,7 +47,7 @@ namespace WindowsFormsApp1
         {
             //рисуем окружность с диаметром равным Power
             g.DrawEllipse(
-                   new Pen(Color.Red),
+                   new Pen(Color.White),
                    X - Power / 2,
                    Y - Power / 2,
                    Power,
