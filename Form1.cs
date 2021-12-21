@@ -110,9 +110,14 @@ namespace WindowsFormsApp1
                 }
         }
 
-        private void lblKryg_Click(object sender, EventArgs e)
+        private void MovingX_Scroll(object sender, EventArgs e)
         {
+            paint1.X = MovingX.Value;
+        }
 
+        private void MovingY_Scroll(object sender, EventArgs e)
+        {
+            paint1.Y = MovingY.Value;
         }
     }
 }
