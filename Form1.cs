@@ -181,7 +181,46 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            colorDialog1.Color =
+            colorDialog1.ShowDialog();
+            paint1.PointColor = colorDialog1.Color;
+            MovingX.BackColor = paint1.PointColor;
+            MovingY.BackColor = paint1.PointColor;
+            Radius.BackColor = paint1.PointColor;
+            label1.BackColor = paint1.PointColor;
+            button1.BackColor = paint1.PointColor;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            colorDialog1.ShowDialog();
+            paint2.PointColor = colorDialog1.Color;
+            trackBar1.BackColor = paint2.PointColor;
+            trackBar2.BackColor = paint2.PointColor;
+            trackBar3.BackColor = paint2.PointColor;
+            label2.BackColor = paint2.PointColor;
+            button2.BackColor = paint2.PointColor;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            colorDialog1.ShowDialog();
+            paint3.PointColor = colorDialog1.Color;
+            trackBar4.BackColor = paint3.PointColor;
+            trackBar5.BackColor = paint3.PointColor;
+            trackBar6.BackColor = paint3.PointColor;
+            label3.BackColor = paint3.PointColor;
+            button3.BackColor = paint3.PointColor;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            colorDialog1.ShowDialog();
+            paint4.PointColor = colorDialog1.Color;
+            trackBar7.BackColor = paint4.PointColor;
+            trackBar8.BackColor = paint4.PointColor;
+            trackBar9.BackColor = paint4.PointColor;
+            label4.BackColor = paint4.PointColor;
+            button4.BackColor = paint4.PointColor;
         }
     }
 }
