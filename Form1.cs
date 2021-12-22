@@ -21,6 +21,7 @@ namespace WindowsFormsApp1
         public PainterPoint paint3;
         public PainterPoint paint4;
         Particle part = new Particle();
+        Radar radar = new Radar();
         public Form1()
         {
             InitializeComponent();
@@ -69,10 +70,18 @@ namespace WindowsFormsApp1
 
             point1 = new GravityPoint
             {
-                PointColor = Color.White,
+                PointColor = Color.Red,
                 X = picDisplay.Width / 2 - 100,
                 Y = picDisplay.Height / 2
             };
+
+            radar = new Radar
+            {
+                X = picDisplay.Width / 2 - 100,
+                Y = picDisplay.Height / 2
+            };
+            emitter.impactPoints.Add(radar);
+
             emitter.impactPoints.Add(paint1);
             emitter.impactPoints.Add(paint2);
             emitter.impactPoints.Add(paint3);
@@ -105,8 +114,8 @@ namespace WindowsFormsApp1
                     emitter.MousePositionX = e.X;
                     emitter.MousePositionY = e.Y;
 
-                    point1.X = e.X;
-                    point1.Y = e.Y;
+                    radar.X = e.X;
+                    radar.Y = e.Y;
                 }
         }
 
@@ -168,6 +177,11 @@ namespace WindowsFormsApp1
         private void trackBar9_Scroll(object sender, EventArgs e)
         {
             paint4.Rad = trackBar9.Value;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            colorDialog1.Color =
         }
     }
 }

@@ -50,6 +50,7 @@ namespace WindowsFormsApp1
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picDisplay = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.MovingY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MovingX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Radius)).BeginInit();
@@ -271,7 +272,6 @@ namespace WindowsFormsApp1
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox1.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Дед1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Enabled = false;
             this.pictureBox1.Location = new System.Drawing.Point(943, 370);
@@ -283,16 +283,29 @@ namespace WindowsFormsApp1
             // 
             // picDisplay
             // 
-            this.picDisplay.Location = new System.Drawing.Point(-1, 12);
+            this.picDisplay.Location = new System.Drawing.Point(-1, 2);
             this.picDisplay.Name = "picDisplay";
-            this.picDisplay.Size = new System.Drawing.Size(1022, 352);
+            this.picDisplay.Size = new System.Drawing.Size(1022, 362);
             this.picDisplay.TabIndex = 0;
             this.picDisplay.TabStop = false;
             this.picDisplay.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picDisplay_MouseMove);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(190, 431);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(22, 24);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1021, 462);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.trackBar9);
@@ -311,7 +324,9 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label1);
             this.Controls.Add(this.MovingX);
             this.Controls.Add(this.picDisplay);
+            this.IsMdiContainer = true;
             this.Name = "Form1";
+            this.Text = "Привет я курсовая";
             ((System.ComponentModel.ISupportInitialize)(this.MovingY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MovingX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Radius)).EndInit();
@@ -353,6 +368,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TrackBar trackBar9;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

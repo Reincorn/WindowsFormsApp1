@@ -63,29 +63,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Дед {
-            get {
-                object obj = ResourceManager.GetObject("Дед", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Дед1 {
             get {
                 object obj = ResourceManager.GetObject("Дед1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Котос {
-            get {
-                object obj = ResourceManager.GetObject("Котос", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

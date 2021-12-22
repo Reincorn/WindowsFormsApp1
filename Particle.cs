@@ -21,7 +21,8 @@ namespace WindowsFormsApp1
 
         public Color Color0;
         public Color Color1;
-
+        public Color ColorFrom = Color.White;//начальный цвет частиц
+        public Color ColorTo = Color.FromArgb(0, Color.Black);//конечный цвет частиц
         public Particle() //Констуруктор, который создаёт кастомную частицу
         {
             var direction = (double)rand.Next(360);//
