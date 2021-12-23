@@ -36,6 +36,12 @@ namespace WindowsFormsApp1
             };
             emitters.Add(this.emitter);
 
+            radar = new Radar
+            {
+                X = picDisplay.Width / 2 - 100,
+                Y = picDisplay.Height / 2
+            };
+            
             paint1 = new PainterPoint
             {
                 PointColor = Color.Orange,
@@ -74,14 +80,6 @@ namespace WindowsFormsApp1
                 X = picDisplay.Width / 2 - 100,
                 Y = picDisplay.Height / 2
             };
-
-            radar = new Radar
-            {
-                X = picDisplay.Width / 2 - 100,
-                Y = picDisplay.Height / 2
-            };
-            emitter.impactPoints.Add(radar);
-
             emitter.impactPoints.Add(paint1);
             emitter.impactPoints.Add(paint2);
             emitter.impactPoints.Add(paint3);

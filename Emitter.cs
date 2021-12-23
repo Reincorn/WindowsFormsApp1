@@ -10,7 +10,8 @@ namespace WindowsFormsApp1
     public class Emitter
     {
         List<Particle> particles = new List<Particle>();//Список частиц
-        public List<IImpactPoint> impactPoints = new List<IImpactPoint>();//Точки притяжения
+        public List<IImpactPoint> impactPoints = new List<IImpactPoint>();
+        public List<IImpactPoint> boba = new List<IImpactPoint>();//Точки притяжения
         public int MousePositionX = 0;//Положение мыши по X
         public int MousePositionY = 0;//Положение мыши по Y
         public float GravitationX = 0;
@@ -41,8 +42,7 @@ namespace WindowsFormsApp1
             foreach (var particle in particles) //пересчитывание положения частиц в соответствии с их направлением движения и скоростью.
             {
                 if (particle.Life <= 0)
-                {
-                    ResetParticle(particle);
+                { 
                     if (particlesToCreate > 0)
                     {
                         //сброс частиц = создание частиц
@@ -80,13 +80,17 @@ namespace WindowsFormsApp1
         {
             foreach (var particle in particles) //отрисовка частиц
             {
-                particle.Draw(g);
+                if (particle.Life!=0)
+                {
+                    particle.Draw(g);
+                }
             }
             foreach (var point in impactPoints)//Красный круг притяжения
             {
                 point.Render(g);
             }
         }
+
 
         public virtual void ResetParticle(Particle particle)
         {
